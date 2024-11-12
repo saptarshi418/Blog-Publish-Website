@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+<title>Blog World || Create Blog</title>
+{% endblock title %}
+{% block stylesheet%}
+<link rel="stylesheet" href="{% static '/css/createblog.css' %}" />
+{% endblock stylesheet%}
+{% block contents %}
+<div class="bodyDiv">
+    <form action="" method="post">
+        {% csrf_token %}
+        {{BlogForm.as_p}}
+        {% comment %} <label for="">choose Catagory: </label>
+        <select name="" id="">
+            {% for cat in catagory %}
+            <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+            {% endfor %}
+        </select>
+        <label for="">Blog Title: </label>
+        <input type="text" placeholder="title"> <br>
+        <label for="">Author: </label>
+        <input type="text" placeholder="author"> <br> {% endcomment %}
+        
+        
+        <button type="submit">Post<button>
+    </form>
+</div>
+
+<script src="https://cdn.tiny.cloud/1/slyh3kh1h5re9y82ivhpbvbw5run3u9nedpwa1vh3pm7fc4r/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+
+<script>
+  tinymce.init({
+    selector: 'textarea',  // Applies TinyMCE to all textareas
+    plugins: 'advlist autolink lists link image charmap print preview anchor textcolor',
+    toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | code '
+  });
+</script>
+
+{% endblock contents %}

@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    
+  }
+  .fullbody{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 10px 10px 0px 10px;
+  }
+  .nav{
+    height: 25vh;
+    width: 100%;
+    background-color: rgb(92, 115, 225);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .topPart{
+    height: 60%;
+    width: 100%;
+    padding: 0 2vw;
+    
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logoImg{
+    height: 75%;
+    width: 30%;
+    max-width: 250px;
+  }
+  .accLogo{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+  .loginBtn{
+    height: 35px;
+    width: 80px;
+    background-color: rgb(236, 236, 236);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .loginBtn:hover{
+    cursor: pointer;
+    background-color: rgb(191, 197, 191);
+  }
+
+  .accInfo{
+    /* height: 75%; */
+    /* width: 70%; */
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .bottomPart{
+    height: 25%;
+    width: 100%;
+    /* background-color: brown; */
+    border-radius: 5px;
+    display: flex;
+    
+    justify-content: center;
+  }
+  .searchBar{
+    height: 100%;
+    width: 80%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+    
+  }

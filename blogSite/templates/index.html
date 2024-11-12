@@ -1,0 +1,48 @@
+{% extends "base.html" %} {% load static %} {% block title %}
+<title>Blog World || Home</title>
+{% endblock title %} {% block stylesheet %}
+<link rel="stylesheet" href="{% static '/css/index.css' %}" />
+{% endblock stylesheet %} {% block contents %}
+<div class="midPart">
+  <div class="leftContainer">
+    <div class="categoryList">
+      <p>Categories</p>
+      {% for cat in catagory %}
+      <button class="category" value="{{cat.category_name}}">
+        {{cat.category_name}}
+      </button>
+      {% endfor %}
+      
+    </div>
+    <div class="update">
+      <a href="{% url 'createblog'  %}"><button class="category" value="create blog">Create Blog</button></a>
+      <a href="{% url 'createblog'  %}"><button class="category" value="my blog">My Blog</button></a>
+      <button class="category" value="watch later">Watch Later</button>
+    </div>
+  </div>
+  <div class="rightContainer">
+    <!-- card -->
+    {% for n in blog_article %}
+    
+    <div class="card">
+      <div class="imgPart">
+        <img src="{{n.coverImage.url}}" alt="Image" class="cardImg">
+        <img src="{% static 'img/bookmark.png' %}" alt="Image" srcset="" class="bookmarkLogo">
+        
+      </div>
+      <div class="detailsPart">
+        <p class="blogTitle">{{n.title}}</p>
+        <p class="blogAuthor">👤{{n.author}}</p>
+        <p class="blogDate">{{n.post_date}}</p>
+
+      </div>
+    </div>
+    {% endfor %}
+    
+
+    
+    
+  </div>
+</div>
+
+{% endblock contents %}

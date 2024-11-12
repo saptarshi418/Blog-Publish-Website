@@ -1,0 +1,148 @@
+.midPart{
+    margin-top: 5vh;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(199, 198, 198);
+    
+    display: flex;
+    padding: 10px;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.leftContainer{
+    height: 100%;
+    width: 30%;
+    max-width: 250px;
+    /* background-color: rgb(35, 40, 65); */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 0 5px;
+    border-radius: 10px;
+
+}
+.categoryList{
+    height: 60%;
+    width: 100%;
+    background-color:rgb(92, 115, 225);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    padding-top: 10px;
+}
+.categoryList p{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+.update{
+    height: 30%;
+    width: 100%;
+    background-color:rgb(92, 115, 225);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    border-radius: 10px;
+    padding-top: 5px;
+}
+.category{
+    height: 38px;
+    width: 24vw;
+    padding: 0px 10px;
+    max-width: 200px;
+    border-radius: 10px;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: #97b1df; /* Example background color */
+    color: #ffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4); /* Initial shadow */
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.category:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+.category:active {
+    transform: translateY(2px); /* Moves the button down slightly */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Reduces shadow on click */
+}
+
+.rightContainer {
+    height: 92vh;
+    width: 60%;
+    background-color: rgb(92, 115, 225);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;      /* Change to row to align cards horizontally */
+    flex-wrap: wrap;          /* Allow wrapping to the next line when space runs out */
+    gap: 20px;                /* Add spacing between cards if needed */
+    padding: 20px;
+    margin-top: 18px;
+    overflow-x: auto;
+}
+
+.card {
+    height: 220px;
+    width: 230px;
+    background-color: white;
+    border-radius: 25px;
+}
+.card:hover{
+    cursor: pointer;
+}
+
+.imgPart{
+    height: 52%;
+    width: 100%;
+    /* background-color: aqua; */
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    position: relative;
+}
+.cardImg{
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.bookmarkLogo{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    top: 20px;
+    right: 20px;
+}
+.detailsPart{
+    height: 48%;
+    width: 100%;
+    background-color: rgb(254, 254, 254);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 5px;
+}
+.blogTitle{
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    margin-left: 5px;
+}
+.blogAuthor{
+    margin-top: 5px;
+    
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(114, 109, 109);
+}
+.blogDate{
+    margin-top: 5px;
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(114, 109, 109);
+}

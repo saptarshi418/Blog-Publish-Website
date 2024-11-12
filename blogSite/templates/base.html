@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    
+    {% endblock title %}
+    <link rel="stylesheet" href="{% static '/css/base.css' %}">
+    {% block stylesheet %}
+   
+    {% endblock stylesheet %}
+    
+</head>
+<body>
+    <div class="fullbody">
+        <div class="nav">
+            <div class="topPart">
+                <img src="{% static 'img/logo.png' %}"  alt="no img to show" srcset="" class="logoImg">
+                <div class="accInfo">
+                    <img src="{% static 'img/logo.png' %}" alt="" srcset="" class="accLogo">
+                    <button class="loginBtn">log In</button>
+                </div>
+            </div>
+            <div class="bottomPart">
+                <input type="text" placeholder="Enter your Keyword" class="searchBar"  >
+            </div>
+        </div>
+        {% block contents %}
+        
+        {% endblock contents %}
+    </div>
+    
+</body>
+</html>
