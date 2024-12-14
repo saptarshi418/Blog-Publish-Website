@@ -25,4 +25,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('',views.indexPage , name='home'),
     path('createblog/',views.createblog ,name="createblog"),
+    
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

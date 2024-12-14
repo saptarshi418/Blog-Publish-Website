@@ -3,6 +3,10 @@ from django.shortcuts import render , redirect
 from blogapp.models import Categories
 from textwriter.models import Textwriter
 from textwriter.forms import BlogForm
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+
+
 def indexPage(request):
     categoryData = Categories.objects.all().order_by('id')
     
@@ -15,15 +19,21 @@ def indexPage(request):
     return render (request,'index.html',data)
 
 
-   
+ 
    
 
+
+
 def createblog(request):
-    catagoryData = Categories.objects.all().order_by('id')
-    fm = BlogForm()
-    data={
-        'catagory' : catagoryData,
-        'BlogForm' : fm,
-    }
-    
-    return render(request, 'createblog.html',data)
+    if request.method == 'POST':
+        form = BlogForm(request.POST, request.FILES)
+        if form.is_valid():
+            print("sfkjhkg")
+            instance = form.save()
+            print(instance.title)
+            return redirect('home')  # Success
+        else:
+            print(form.errors)  # Log errors
+    else:
+        form = BlogForm()
+    return render(request,'createblog.html', {'form':form})

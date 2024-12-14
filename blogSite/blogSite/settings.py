@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-v-b3rb-%(uopkl+f73a-6hzly396fx*tl%zj0l@w746!oh(q49
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -139,3 +139,7 @@ TINYMCE_DEFAULT_CONFIG = {
     "codesample_dialog_height": 400,
     "content_css": "/static/css/content.css",  # Optional: custom styles for editor content
 }
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

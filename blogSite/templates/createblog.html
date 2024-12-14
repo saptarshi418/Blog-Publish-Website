@@ -8,33 +8,40 @@
 {% endblock stylesheet%}
 {% block contents %}
 <div class="bodyDiv">
-    <form action="" method="post">
+    <form action="" method="POST" >
         {% csrf_token %}
-        {{BlogForm.as_p}}
-        {% comment %} <label for="">choose Catagory: </label>
-        <select name="" id="">
-            {% for cat in catagory %}
-            <option value="{{cat.category_name}}">{{cat.category_name}}</option>
-            {% endfor %}
-        </select>
-        <label for="">Blog Title: </label>
-        <input type="text" placeholder="title"> <br>
-        <label for="">Author: </label>
-        <input type="text" placeholder="author"> <br> {% endcomment %}
+        {{ form.as_p }}
         
         
-        <button type="submit">Post<button>
+        
+        <button type="submit" class="submitButton">Post<button>
     </form>
 </div>
 
-<script src="https://cdn.tiny.cloud/1/slyh3kh1h5re9y82ivhpbvbw5run3u9nedpwa1vh3pm7fc4r/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+<script src="https://cdn.tiny.cloud/1/slyh3kh1h5re9y82ivhpbvbw5run3u9nedpwa1vh3pm7fc4r/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
 <script>
   tinymce.init({
     selector: 'textarea',  // Applies TinyMCE to all textareas
     plugins: 'advlist autolink lists link image charmap print preview anchor textcolor',
-    toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | code '
+    toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | code ', 
+    height: '400px', 
+    width: '85%',  
+    content_style: "body { background-color: #f0f0f0; color: #333; font-family: Arial, sans-serif; }",
+    setup: (editor) => {
+      editor.on('SkinLoaded', () => {
+          // Change the menu bar background color
+          document.querySelector('.tox-menubar').style.backgroundColor = '#97b1df'; 
+          
+          
+          // Change the toolbar background color
+          document.querySelector('.tox-toolbar').style.backgroundColor = '#bfb9b9'; // Light blue toolbar
+      });
+  }
   });
 </script>
+
+
+
 
 {% endblock contents %}

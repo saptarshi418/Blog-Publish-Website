@@ -1,5 +1,70 @@
 .bodyDiv{
-    height: 100%;
+    height: 150vh;
     width: 100%;
     background: red;
+   
+}
+form{
+    background-color: blueviolet;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: normal;
+    
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 10px;
+    
+    
+}
+.submitButton{
+    height: 38px;
+    width: 24vw;
+    padding: 0px 10px;
+    max-width: 150px;
+    border-radius: 10px;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: #97b1df; /* Example background color */
+    color: #ffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4); /* Initial shadow */
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+#id_Book_category{
+    height: 40px;
+    width: 170px;
+    background-color: #e5f9f9d4;
+    margin: 10px;
+    border-radius: 5px;
+    outline: none;
+}
+#id_title{
+    height: 40px;
+    width: 150px;
+    background-color:#e5f9f9d4;
+    margin: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 5px;
+}
+#id_author{
+    height: 40px;
+    width: 170px;
+    background-color:#e5f9f9d4;
+    margin: 10px;
+    border-radius: 5px;
+    outline: none;
+}
+#id_coverImage{
+    
+    
+    margin: 10px;
+    border-radius: 5px;
+    outline: none; 
+}
+.mce-content-body {
+    background-color: black;
+    border-radius: 15px;
 }
